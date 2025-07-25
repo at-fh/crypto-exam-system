@@ -1,0 +1,26 @@
+{
+  "name": "crypto-exam-system",
+  "version": "3.0.0",
+  "description": "密评考试系统 - Cloudflare Pages 版本",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "deploy": "wrangler pages deploy",
+    "tail": "wrangler pages deployment tail"
+  },
+  "keywords": [
+    "cloudflare-pages",
+    "exam-system",
+    "密评考试",
+    "密码评估",
+    "在线考试"
+  ],
+  "author": "密评考试系统开发团队",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.20.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

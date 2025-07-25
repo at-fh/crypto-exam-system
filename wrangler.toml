@@ -1,0 +1,38 @@
+name = "crypto-exam-system"
+compatibility_date = "2024-01-15"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "crypto-exam-system"
+
+[env.preview]
+name = "crypto-exam-system-preview"
+
+# Pages configuration
+pages_build_output_dir = "./"
+
+# Environment variables (will be set in Cloudflare dashboard)
+[vars]
+ENVIRONMENT = "production"
+
+# KV Namespaces for caching and data storage
+[[kv_namespaces]]
+binding = "CACHE_KV"
+id = "66f2f48a66474c2799d8c99fcd162a5d"
+preview_id = "your-preview-cache-kv-namespace-id"
+
+[[kv_namespaces]]
+binding = "DATA_KV"
+id = "e4313d08744341ffacb48a8bc3fee03d"
+preview_id = "your-preview-data-kv-namespace-id"
+
+# Routes configuration
+[build]
+command = ""
+cwd = "./"
+watch_dir = "./"
+
+# Custom domains (optional - configure in Cloudflare dashboard)
+# [env.production.route]
+# pattern = "your-domain.com/*"
+# zone_name = "your-domain.com"
